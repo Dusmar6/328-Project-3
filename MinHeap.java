@@ -1,7 +1,4 @@
-package Code;
-
-// Greyson Cabrera 014121118
-// Dustin Martin 015180085
+package test;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,14 +8,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MinHeap {
-
     public int[] heap;
     public int size;
     public int maxsize;
 
-
     public MinHeap(int max) {
-
         this.size = 0;
         this.maxsize = max;
         this.heap = new int[this.maxsize + 1];
@@ -26,7 +20,6 @@ public class MinHeap {
     }
 
     public void insert(int element){
-
         if (size >= maxsize) {
             return;
         }
@@ -40,7 +33,6 @@ public class MinHeap {
     }
 
     public int pop(){
-
         int popped = heap[1];
         heap[1] = heap[size--];
         percolate_down(1);
@@ -68,44 +60,39 @@ public class MinHeap {
     }
 
     public void build_heap(){
-
-        for (int i = size/2; i >= 1; i--) {
+        for (int i = (size / 2)-1; i >= 1; i--) {
             percolate_down(i);
         }
     }
 
     public void heap_sort(){
-
         int si = size;
         for (int i=1; i<si; i++ ){
-            pop();
+            System.out.print(pop());
         }
+        this.heap = null;
+
     }
 
     public void swap(int a, int b) {
-
-        int temp;
-        temp = heap[a];
+        int tmp;
+        tmp = heap[a];
         heap[a] = heap[b];
-        heap[b] = temp;
+        heap[b] = tmp;
     }
 
     public void print(){
-
         for (int i = 1; i <= size; i++) {
             System.out.print(heap[i] + " ");
         }
     }
     public int get_parent(int i) {
-
         return i/2;
     }
     public int get_left(int i) {
-
         return 2*i;
     }
     public int get_right(int i) {
-
         return 2*i + 1;
     }
 
@@ -171,6 +158,7 @@ public class MinHeap {
                     case "5":
                         if (show){
                             arr.heap_sort();
+                            show = false;
                         }
                         else {
                             System.out.println("Min Heap not initialized");
