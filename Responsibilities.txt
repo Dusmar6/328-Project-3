@@ -1,0 +1,7 @@
+Project 3:
+Dustin Martin: 
+Majority of the minheap algoritms.
+
+Greyson Cabrera:
+Minheap algs and menu options/logic
+
