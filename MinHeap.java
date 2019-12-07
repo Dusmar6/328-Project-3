@@ -1,4 +1,5 @@
-package test;
+// Greyson Cabrera 014121118
+// Dustin Martin 015180085
 
 import java.util.Arrays;
 import java.util.Random;
